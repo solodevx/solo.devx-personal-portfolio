@@ -1,6 +1,35 @@
 import { Button } from "@/components/Button";
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
-import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import {
+  ArrowRight,
+  ChevronDown,
+  Github,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
+import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
+const skills = [
+  "React",
+  "JavaScript",
+  "TypeScript",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "WebGL",
+  "Three.js",
+  "Tailwind CSS",
+  "Bootstrap",
+  "MongoDB",
+  "PostgreSQL",
+  "GraphQL",
+  "Vercel",
+  "Canva",
+  "Figma",
+  "Git",
+  "GitHub",
+  "GitHub Actions",
+];
+
 
 export const Hero = () => {
   return (
@@ -12,7 +41,7 @@ export const Hero = () => {
           alt="Hero Background Image"
           className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-background/20 via-background/80 to-background"></div>
       </div>
 
       {/* Dots */}
@@ -120,9 +149,10 @@ export const Hero = () => {
                     </span>
                   </div>
                 </div>
+
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">4+</div>
                   <div className="text-xs text-muted-foreground">
                     Years Exp.
                   </div>
@@ -131,7 +161,47 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* Skills Section */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-32
+             bg-gradient-to-r from-background to-transparent z-10"
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-32
+             bg-gradient-to-l from-background to-transparent z-10"
+            />
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 
+      animate-fade-in animation-delay-800 cursor-pointer"
+      >
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
+      </div>
+
     </section>
   );
 };
