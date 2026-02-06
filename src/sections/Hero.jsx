@@ -7,6 +7,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { Children } from "react";
 
 const skills = [
   "React",
@@ -101,7 +102,9 @@ export const Hero = () => {
               </Button>
 
               {/* Download Button */}
-              <AnimatedBorderButton />
+              <AnimatedBorderButton>
+                Download CV
+              </AnimatedBorderButton>
             </div>
 
             {/* Social Links */}
@@ -129,7 +132,7 @@ export const Hero = () => {
             <div className="relative max-w-md mx-auto">
               <div
                 className="absolute inset-0 
-              rounded-3xl bg-gradient-to-br 
+              rounded-3xl bg-linear-to-br 
               from-primary/30 via-transparent 
               to-primary/10 blur-2xl animate-pulse"
               />
@@ -137,7 +140,7 @@ export const Hero = () => {
                 <img
                   src="/profile-photo.jpg"
                   alt="Solomon Isu"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                  className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}
@@ -170,15 +173,15 @@ export const Hero = () => {
           <div className="relative overflow-hidden">
             <div
               className="absolute left-0 top-0 bottom-0 w-32
-             bg-gradient-to-r from-background to-transparent z-10"
+             bg-linear-to-r from-background to-transparent z-10"
             />
             <div
               className="absolute right-0 top-0 bottom-0 w-32
-             bg-gradient-to-l from-background to-transparent z-10"
+             bg-linear-to-l from-background to-transparent z-10"
             />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                <div key={idx} className="shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}
                   </span>
