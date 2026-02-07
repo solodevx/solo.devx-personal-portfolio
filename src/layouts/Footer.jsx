@@ -1,15 +1,16 @@
 import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/solodevx", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/chukwunnoso-isu", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/_solodevx", label: "Twitter" },
 ];
 
 const footerLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -22,11 +23,11 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <a href="#" className="text-xl font-bold tracking-tight">
-              PM<span className="text-primary">.</span>
+            <a href="#hero" className="text-xl font-bold tracking-tight">
+              SX<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Pedro Machado. All rights reserved.
+              © {currentYear} [solo.devx]. All rights reserved.
             </p>
           </div>
 
@@ -51,6 +52,8 @@ export const Footer = () => {
                 href={social.href}
                 aria-label={social.label}
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                target="_blank"
+                norel="noopener noreferrer"
               >
                 <social.icon className="w-5 h-5" />
               </a>

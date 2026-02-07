@@ -1,29 +1,20 @@
 const experiences = [
   {
-    period: "2020 — Present",
+    period: "2021 — Present",
     role: "Frontend Engineer",
     company: "solo.devx",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Developed and maintained responsive websites and web applications for 10+ clients and small businesses. Focused on clean UI/UX design, cross-browser compatibility, and frontend performance optimizations. Managed projects independently and collaborated with freelance teams when needed.",
+    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vercel", "GitHub", "Figma", "Canva"],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
-    description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
-    current: false,
-  },
-  {
-    period: "2019 — 2020",
-    role: "Junior Developer",
+    period: "2022 — 2024",
+    role: "Web Developer",
     company: "Gilbert Constructions ",
     description:
       "Developed, maintained, and updated company website for the construction company. Ensured website functionality, responsiveness, and UX quality. Assisted with IT support as needed, providing troubleshooting for technical issues.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
+    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vercel", "GitHub", "Figma", "Canva"],
     current: false,
   }
 ];
@@ -43,17 +34,17 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Tech Journey
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Experience through{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              growth, impact, and innovation.
             </span>
           </h2>
 
@@ -61,8 +52,7 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            From a curious web explorer to a senior frontend engineer, I’ve built scalable applications, crafted seamless user interfaces, and led teams to deliver polished, high-impact digital products. Every step of my journey reflects a passion for clean code, modern technologies, and experiences that delight users.
           </p>
         </div>
 

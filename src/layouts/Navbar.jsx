@@ -7,6 +7,7 @@ const navLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#testimonials", label: "Testimonials" },
+  { href: "#contact", label: "Contact" },
 ];
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,10 +31,10 @@ export const Navbar = () => {
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
-          href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          href="#hero"
+          className="text-3xl font-bold tracking-tight hover:text-primary logo uppercase"
         >
-          SDx<span className="text-primary">.</span>
+          solo<span className="text-primary">.dev</span>x
         </a>
 
         {/* Desktop Navigation */}
@@ -53,7 +54,9 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Button size="sm">
+            <a href="#contact">Let's talk</a>
+          </Button>
         </div>
 
         {/* ------------------------------------------------- */}
@@ -83,7 +86,11 @@ export const Navbar = () => {
             ))}
 
             {/* CTA Button */}
-            <Button>Contact Me</Button>
+            <Button>
+              <a href="#contact">
+                Let's talk
+              </a>
+            </Button>
           </div>
         </div>
       )}

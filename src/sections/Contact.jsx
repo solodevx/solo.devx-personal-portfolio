@@ -14,8 +14,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "chukwunnoso.isu@example.com",
-    href: "mailto:chukwunnoso.isu@example.com",
+    value: "chukwunnoso.isu@gmail.com",
+    href: "mailto:chukwunnoso.isu@gmail.com?subject=Project%20Inquiry&body=Hi,%20Solomon%2C%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.",
   },
   {
     icon: Phone,
@@ -23,12 +23,12 @@ const contactInfo = [
     value: "+234 (813) 355-8855",
     href: "tel:+2348133558855",
   },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Lagos, Nigeria",
-    href: "#",
-  },
+{
+  icon: MapPin,
+  label: "Location",
+  value: "Lagos, Nigeria",
+  href: "https://www.google.com/maps/search/?api=1&query=Lagos+Nigeria",
+}
 ];
 
 export const Contact = () => {
@@ -227,6 +227,7 @@ export const Contact = () => {
                     key={i}
                     href={item.href}
                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                    rel="noopener noreferrer"
                   >
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <item.icon className="w-5 h-5 text-primary" />
@@ -249,9 +250,9 @@ export const Contact = () => {
                 <span className="font-medium">Currently Available</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                I'm currently open to new opportunities and exciting projects.
-                Whether you need a full-time engineer or a freelance consultant,
-                let's talk!
+                Available for select roles and projects. If you need a frontend
+                engineer or a freelance consultant who values quality and
+                clarity, let’s connect.
               </p>
             </div>
           </div>

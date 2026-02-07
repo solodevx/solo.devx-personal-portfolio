@@ -31,10 +31,12 @@ const skills = [
   "GitHub Actions",
 ];
 
-
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Hero Background Image */}
       <div className="absolute inset-0">
         <img
@@ -70,8 +72,8 @@ export const Hero = () => {
             {/* Tags */}
             <div className="animate-fade-in animation-delay-100">
               <span className="inline-flex items-center gap-2 px-2 py-2 rounded-full glass text-sm text-primary">
-                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                Frontend Developer • React | Next.js
               </span>
             </div>
 
@@ -98,24 +100,35 @@ export const Hero = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               {/* CTA */}
               <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
+                <a href="#contact" className="flex items-center gap-2">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
 
               {/* Download Button */}
-              <AnimatedBorderButton>
-                Download CV
-              </AnimatedBorderButton>
+              <a
+                href="/cv/Isu_Chukwunnoso_Solomon_Frontend_Developer_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AnimatedBorderButton>Download CV</AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/solodevx" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/chukwunnoso-isu/",
+                },
+                { icon: Twitter, href: "https://twitter.com/solodevx" },
               ].map((social, idx) => (
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={idx}
                   href={social.href}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
@@ -194,7 +207,7 @@ export const Hero = () => {
 
       <div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800 cursor-pointer"
+      animate-fade-in animation-delay-800"
       >
         <a
           href="#about"
@@ -204,7 +217,6 @@ export const Hero = () => {
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>
-
     </section>
   );
 };
