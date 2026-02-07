@@ -23,7 +23,7 @@ const testimonials = [
     quote:
       "Solomon quickly understood our product goals and delivered a clean, scalable frontend. Fast execution, thoughtful decisions, and a strong grasp of modern web development.",
     author: "Chizaram Chinedu",
-    role: "Founder, AppEasy",
+    role: "Co-founder, AppEasy",
     avatar:
       "/testimonials/appeasy.jpg",
   }
